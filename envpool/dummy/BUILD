@@ -18,25 +18,6 @@ cc_library(
     ],
 )
 
-cc_test(
-    name = "dummy_envpool_test",
-    srcs = ["dummy_envpool_test.cc"],
-    deps = [
-        ":dummy_envpool_h",
-        "@com_google_googletest//:gtest_main",
-    ],
-)
-
-py_test(
-    name = "dummy_py_envpool_test",
-    srcs = ["dummy_py_envpool_test.py"],
-    data = ["dummy_envpool.so"],
-    deps = [
-        requirement("numpy"),
-        requirement("absl-py"),
-    ],
-)
-
 pybind_extension(
     name = "dummy_envpool",
     srcs = [

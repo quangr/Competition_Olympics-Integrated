@@ -74,18 +74,6 @@ py_library(
     deps = ["//envpool/python:api"],
 )
 
-py_test(
-    name = "toy_text_test",
-    srcs = ["toy_text_test.py"],
-    deps = [
-        ":toy_text",
-        requirement("absl-py"),
-        requirement("dm_env"),
-        requirement("gym"),
-        requirement("numpy"),
-        requirement("scipy"),
-    ],
-)
 
 py_library(
     name = "toy_text_registration",

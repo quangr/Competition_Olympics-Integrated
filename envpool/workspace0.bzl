@@ -151,6 +151,17 @@ def workspace():
 
     maybe(
         http_archive,
+        name = "eigen",
+        urls = [
+            "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz",
+        ],
+        sha256 = "8586084f71f9bde545ee7fa6d00288b264a2b7ac3607b974e54d13e7162c1c72",
+        strip_prefix = "eigen-3.4.0",
+        build_file = "//third_party/eigen:eigen.BUILD",
+    )
+
+    maybe(
+        http_archive,
         name = "ale",
         sha256 = "e3bada34cc6c116377c4a807c24d9890ce33afa854ffc45e32dc90ba0dcc9140",
         strip_prefix = "Arcade-Learning-Environment-0.7.3",

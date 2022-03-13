@@ -66,31 +66,6 @@ py_library(
     deps = ["//envpool/python:api"],
 )
 
-py_test(
-    name = "vizdoom_test",
-    srcs = ["vizdoom_test.py"],
-    deps = [
-        ":vizdoom",
-        requirement("numpy"),
-        requirement("absl-py"),
-        requirement("opencv-python-headless"),
-    ],
-)
-
-py_test(
-    name = "vizdoom_pretrain_test",
-    srcs = ["vizdoom_pretrain_test.py"],
-    data = [":gen_pretrain_weight"],
-    deps = [
-        ":vizdoom",
-        "//envpool/atari:atari_network",
-        requirement("numpy"),
-        requirement("absl-py"),
-        requirement("tianshou"),
-        requirement("torch"),
-    ],
-)
-
 py_library(
     name = "vizdoom_registration",
     srcs = ["registration.py"],

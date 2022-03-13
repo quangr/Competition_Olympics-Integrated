@@ -42,14 +42,6 @@ cc_library(
     ],
 )
 
-cc_test(
-    name = "atari_env_test",
-    srcs = ["atari_env_test.cc"],
-    deps = [
-        ":atari_env",
-        "@com_google_googletest//:gtest_main",
-    ],
-)
 
 py_library(
     name = "atari_network",
@@ -74,44 +66,6 @@ pybind_extension(
     ],
 )
 
-py_test(
-    name = "api_test",
-    srcs = ["api_test.py"],
-    deps = [
-        ":atari",
-        "//envpool/python",
-        requirement("numpy"),
-    ],
-)
-
-py_test(
-    name = "atari_envpool_test",
-    srcs = ["atari_envpool_test.py"],
-    deps = [
-        ":atari",
-        requirement("numpy"),
-        requirement("dm-env"),
-        requirement("absl-py"),
-        requirement("opencv-python-headless"),
-    ],
-)
-
-py_test(
-    name = "atari_pretrain_test",
-    srcs = ["atari_pretrain_test.py"],
-    data = [
-        ":gen_pretrain_weight",
-    ],
-    deps = [
-        ":atari",
-        ":atari_network",
-        requirement("numpy"),
-        requirement("absl-py"),
-        requirement("tianshou"),
-        requirement("tqdm"),
-        requirement("torch"),
-    ],
-)
 
 py_library(
     name = "atari_registration",

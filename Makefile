@@ -119,7 +119,7 @@ format: py-format-install clang-format-install buildifier-install addlicense-ins
 # Build docker images
 
 docker-dev:
-	docker build --network=host -t $(PROJECT_NAME):$(COMMIT_HASH) -f docker/dev.dockerfile .
+	docker build --network=host -t $(PROJECT_NAME):$(COMMIT_HASH) -f docker/dev.dockerfile . --build-arg HTTPS_PROXY=http://10.46.99.29:10809 
 	docker run --network=host -v /:/host -it $(PROJECT_NAME):$(COMMIT_HASH) bash
 	echo successfully build docker image with tag $(PROJECT_NAME):$(COMMIT_HASH)
 
