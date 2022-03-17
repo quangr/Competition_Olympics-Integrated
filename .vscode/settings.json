@@ -71,6 +71,14 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "*.ipp": "cpp"
+        "*.ipp": "cpp",
+        "any": "cpp",
+        "csetjmp": "cpp",
+        "strstream": "cpp",
+        "codecvt": "cpp",
+        "rope": "cpp",
+        "scoped_allocator": "cpp",
+        "*.py": "python",
+        "alignedvector3": "cpp"
     }
 }

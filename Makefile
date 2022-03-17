@@ -79,8 +79,8 @@ buildifier: buildifier-install
 # bazel build/test
 
 bazel-build: bazel-install
-	bazel build $(BAZELOPT) //... --config=release
-	bazel run $(BAZELOPT) //:setup --config=release -- bdist_wheel
+	bazel build $(BAZELOPT) //... --config=debug 
+	bazel run $(BAZELOPT) //:setup --config=debug -- bdist_wheel
 	mkdir -p dist
 	cp bazel-bin/setup.runfiles/$(PROJECT_NAME)/dist/*.whl ./dist
 
