@@ -79,6 +79,9 @@
         "rope": "cpp",
         "scoped_allocator": "cpp",
         "*.py": "python",
-        "alignedvector3": "cpp"
+        "alignedvector3": "cpp",
+        "*.traits": "cpp",
+        "fft": "cpp",
+        "adolcforward": "cpp"
     }
 }
