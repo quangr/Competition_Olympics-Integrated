@@ -44,3 +44,4 @@ typed-ast
 typing-extensions
 pygame
 matplotlib
+ptvsd
