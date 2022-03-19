@@ -41,15 +41,6 @@ cc_library(
     ],
 )
 
-cc_test(
-    name = "dict_test",
-    srcs = ["dict_test.cc"],
-    deps = [
-        ":dict",
-        "@com_google_googletest//:gtest_main",
-    ],
-)
-
 cc_library(
     name = "state_buffer",
     hdrs = ["state_buffer.h"],
@@ -61,32 +52,12 @@ cc_library(
     ],
 )
 
-cc_test(
-    name = "state_buffer_test",
-    srcs = [
-        "state_buffer_test.cc",
-    ],
-    deps = [
-        ":state_buffer",
-        "@com_google_googletest//:gtest_main",
-    ],
-)
 
 cc_library(
     name = "circular_buffer",
     hdrs = ["circular_buffer.h"],
     deps = [
         "@concurrentqueue",
-    ],
-)
-
-cc_test(
-    name = "circular_buffer_test",
-    srcs = ["circular_buffer_test.cc"],
-    deps = [
-        ":circular_buffer",
-        "@com_github_google_glog//:glog",
-        "@com_google_googletest//:gtest_main",
     ],
 )
 
@@ -100,15 +71,6 @@ cc_library(
     ],
 )
 
-cc_test(
-    name = "state_buffer_queue_test",
-    srcs = ["state_buffer_queue_test.cc"],
-    deps = [
-        ":state_buffer_queue",
-        "@com_google_googletest//:gtest_main",
-        "@threadpool",
-    ],
-)
 
 cc_library(
     name = "action_buffer_queue",
@@ -119,17 +81,6 @@ cc_library(
     ],
 )
 
-cc_test(
-    name = "action_buffer_queue_test",
-    srcs = ["action_buffer_queue_test.cc"],
-    deps = [
-        ":action_buffer_queue",
-        ":dict",
-        ":spec",
-        "@com_google_googletest//:gtest_main",
-        "@threadpool",
-    ],
-)
 
 cc_library(
     name = "env_spec",

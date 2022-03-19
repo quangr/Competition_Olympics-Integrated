@@ -11,6 +11,11 @@
             "program": "/bin/python3",
             "processId": "${command:pickProcess}",
             "MIMode": "gdb",
+            "cwd": "${workspaceFolder}",
+            "sourceFileMap": {
+                "/proc/self/cwd/": "${workspaceFolder}"
+            },
+            "additionalSOLibSearchPath": "/app/bazel-bin/envpool/classic_control/classic_control_test.runfiles/envpool/envpool/classic_control",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",

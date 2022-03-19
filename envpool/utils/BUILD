@@ -9,11 +9,3 @@ cc_library(
     ],
 )
 
-cc_test(
-    name = "image_process_test",
-    srcs = ["image_process_test.cc"],
-    deps = [
-        ":image_process",
-        "@com_google_googletest//:gtest_main",
-    ],
-)

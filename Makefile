@@ -79,13 +79,13 @@ buildifier: buildifier-install
 # bazel build/test
 
 bazel-build: bazel-install
-	bazel build $(BAZELOPT) //... --config=debug 
+	bazel build $(BAZELOPT) //... --config=debug --strip=never
 	bazel run $(BAZELOPT) //:setup --config=debug -- bdist_wheel
 	mkdir -p dist
 	cp bazel-bin/setup.runfiles/$(PROJECT_NAME)/dist/*.whl ./dist
 
 bazel-test: bazel-install
-	bazel test --test_output=all $(BAZELOPT) //... --config=release
+	bazel test --test_output=all $(BAZELOPT) //... --config=debug --strip=never
 
 bazel-clean: bazel-install
 	bazel clean --expunge
