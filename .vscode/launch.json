@@ -50,7 +50,10 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "/app/bazel-bin/envpool/classic_control/core_test_test",
-            "args": [],
+            "args": [
+                "<",
+                "temp.txt"
+            ],
             "stopAtEntry": false,
             "cwd": "/app",
             "environment": [],

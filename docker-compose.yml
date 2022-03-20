@@ -1,0 +1,16 @@
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+
+# JupyterHub docker-compose configuration file
+version: "2"
+
+services:
+  dev-env:
+    image: envpool
+    volumes:
+      - /:/host
+      - /home/quangr/.ssh:/root/.ssh
+    cap_add:
+        - SYS_PTRACE
+    network:
+        -host -v  
