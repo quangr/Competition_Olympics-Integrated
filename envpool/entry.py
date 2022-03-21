@@ -13,7 +13,7 @@
 # limitations under the License.
 """Entry point for all envs' registration."""
 
-import envpool.atari.registration  # noqa: F401
+# import envpool.atari.registration  # noqa: F401
 import envpool.classic_control.registration  # noqa: F401
-import envpool.toy_text.registration  # noqa: F401
-import envpool.vizdoom.registration  # noqa: F401
+# import envpool.toy_text.registration  # noqa: F401
+# import envpool.vizdoom.registration  # noqa: F401
