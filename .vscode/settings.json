@@ -82,6 +82,7 @@
         "alignedvector3": "cpp",
         "*.traits": "cpp",
         "fft": "cpp",
-        "adolcforward": "cpp"
+        "adolcforward": "cpp",
+        "orderingmethods": "cpp"
     }
 }
