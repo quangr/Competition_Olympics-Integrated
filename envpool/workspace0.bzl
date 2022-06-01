@@ -159,7 +159,14 @@ def workspace():
         strip_prefix = "eigen-3.4.0",
         build_file = "//third_party/eigen:eigen.BUILD",
     )
-
+    maybe(
+        http_archive,
+        name = "com_google_benchmark",
+        sha256 = "367e963b8620080aff8c831e24751852cffd1f74ea40f25d9cc1b667a9dd5e45",
+        strip_prefix = "benchmark-1.6.1",
+        urls = ["https://github.com/google/benchmark/archive/v1.6.1.zip"],
+        # build_file = "//third_party/benchmark:benchmark.BUILD"
+    )
     maybe(
         http_archive,
         name = "ale",
